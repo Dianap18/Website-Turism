@@ -1,0 +1,12 @@
+
+body {
+  background-color: #f5f5f5;
+}
+
+.continut {
+  margin-top: 20px;
+}
+
+.destinatie:hover .text {
+  transform: translateY(0);
+}
