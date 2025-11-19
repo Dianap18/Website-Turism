@@ -4,6 +4,7 @@ import DestinationsGrid from "./DestinationsGrid";
 import Footer from "./Footer";
 import './index.css';
 import './principal.css';
+import FiltersSection from "./FiltersSection";
 
 
 const destinations = [
@@ -27,6 +28,7 @@ export default function App() {
     <>
       <Header destinations={destinations} />
       <Banner />
+      <FiltersSection />
       <DestinationsGrid destinations={destinations} />
       <Footer />
     </>

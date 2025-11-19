@@ -1,10 +1,9 @@
 export default function Footer() {
   return (
-    // Wrapper-ul va avea imaginea de fundal definită în CSS (.footer-wrapper)
     <div className="footer-wrapper"> 
       <footer className="footer">
         
-        {/* Coloana 1: Logo și Contact Social Media */}
+    
         <div className="footer-col">
             <a href="/" className="nav-logo">
                 <h2 style={{ color: '#0077ff', marginBottom: '15px' }}>
@@ -19,7 +18,6 @@ export default function Footer() {
             </div>
         </div>
 
-        {/* Coloana 2: Linkuri Ajutătoare */}
         <div className="footer-col">
           <h2>Linkuri Ajutătoare</h2>
           <a href="/">Acasă</a>
@@ -28,7 +26,6 @@ export default function Footer() {
           <a href="/contact">Contact</a>
         </div>
         
-        {/* Coloana 3: Newsletter */}
         <div className="footer-col footer-newsletter">
           <h2>Noutăți</h2>
           <form>
@@ -38,7 +35,6 @@ export default function Footer() {
           </form>
         </div>
 
-        {/* Coloana 4: Contact Detalii */}
         <div className="footer-col">
           <h2>Contact</h2>
           <p>123, Strada X, nr. Z<br />Mureș, Romania</p>
@@ -47,7 +43,6 @@ export default function Footer() {
         </div>
 
 
-        {/* Secțiunea de Copyright */}
         <div className="footer-copyright">
           &copy; {new Date().getFullYear()} <i><sup>Travel</sup>GUIDE</i> realizat de Purenciu Diana
         </div>

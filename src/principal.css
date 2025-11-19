@@ -189,8 +189,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-
 /* destinations grid */
 .continut {
   display: flex;
@@ -245,6 +243,254 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 40px;
   text-align: center;
 }
+
+
+
+.top-destinations-section {
+    padding: 60px 8%;
+    background-color: #fcf8f3;
+    text-align: center;
+}
+
+.top-destinations-title {
+    font-size: 30px;
+    color: #1a2c5b;
+    font-family: 'Dancing Script', cursive; 
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.top-destinations-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #f0ad4e;
+    border-radius: 1px;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    justify-content: center;
+}
+
+.destination-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.continut {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.destinatie {
+  position: relative;
+  width: calc(33.333% - 10px); 
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.destinatie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s;
+}
+
+.destinatie:hover img {
+  transform: scale(1.1);
+}
+
+.text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  
+  height: auto; 
+  padding: 10px 15px; 
+  background-color: rgba(0,0,0,0.5); 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  
+ 
+  transform: translateY(0); 
+  transition: none; 
+}
+
+
+.titlu {
+  font-weight: bold;
+  color: white;
+  font-size: 28px; 
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+
+.detalii-suplimentare {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #f0f0f0; 
+    font-weight: 500;
+}
+
+.rating-info {
+    display: flex;
+    align-items: center;
+}
+
+.rezervari-info {
+    display: flex;
+    align-items: center;
+}
+
+
+.filters-section {
+  padding: 40px 8%;
+  background-color: #f4f7f9; 
+  border-bottom: 2px solid #ddd;
+}
+
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 36px;
+  color: #0077ff; 
+  font-family: 'Poppins', sans-serif; 
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #0077ff; 
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.filters-row {
+  display: flex;
+  gap: 25px; 
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column; 
+  gap: 5px;
+}
+
+.filter-item label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+
+.filter-item select {
+  padding: 10px 20px;
+  border: none; 
+  border-radius: 12px; 
+  font-size: 16px;
+  background-color: #fff; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  appearance: none; 
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.filter-item select:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.filter-item select:focus {
+  outline: none;
+  border: 2px solid #0077ff; 
+  box-shadow: 0 0 0 4px rgba(0,119,255,0.2);
+}
+
+
+.stylish-select {
+    position: relative;
+}
+
+.stylish-select::after {
+    content: '▼'; 
+    position: absolute;
+    top: 30px; 
+    right: 15px;
+    font-size: 12px;
+    color: #0077ff;
+    pointer-events: none; 
+}
+
+
+
+.filter-button {
+  padding: 10px 25px;
+  background-color: #0077ff; 
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 20px; 
+}
+
+.filter-button:hover {
+  background-color: #e64a19;
+  transform: translateY(-2px);
+}
+
+.filter-button:active {
+  transform: translateY(0);
+}
+
 
 /* footer */
 .footer-wrapper {
