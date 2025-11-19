@@ -1,10 +1,13 @@
-export default function DestinationCard({ title, imgSrc, link }) {
+
+import { Link } from "react-router-dom";
+
+export default function DestinationCard({ id, title, bannerImg }) {
   return (
-    <div className="destinatie">
-      <a href={link}><img src={imgSrc} alt={title} /></a>
+    <Link to={`/destinatie/${id}`} className="destinatie">
+      <img src={bannerImg} alt={title} />
       <div className="text">
         <span className="titlu">{title}</span>
       </div>
-    </div>
+    </Link>
   );
 }
