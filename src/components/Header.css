@@ -1,0 +1,126 @@
+/* navbar */
+.navbar {
+position: absolute;   
+  top: 20px;               
+  left: 50%;
+  transform: translateX(-50%); 
+
+  z-index: 300;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px); 
+
+  padding: 12px 35px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15); 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: fit-content; /   
+}
+
+
+.nav-inner {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+
+.navbar {
+  margin-top: 0;
+}
+
+
+.nav-logo h1 {
+  color: #000000;
+  font-size: 30px;
+  transition: 0.25s;
+  padding-right: 5rem;
+}
+
+.nav-logo h1:hover {
+  transform: scale(1.05);
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-link {
+  font-weight: bold;
+  color: #000000;
+  cursor: pointer;
+  padding: 3px 0;
+  position: relative;
+  font-size: 20px;
+}
+
+.nav-link:hover {
+  color: #0077ff;
+}
+
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0; 
+  height: 2px;
+  background: #0077ff;
+  transition: width 0.25s;
+}
+
+.nav-link:hover::after {
+  width: 100%; 
+}
+
+/* dropdown */
+
+.dropdown {
+  position: relative; /*punctul de referinta pentru dropdown*/
+}
+
+.dropdown-btn i {
+  font-size: 12px;
+}
+
+.dropdown-menu {
+  position: absolute; /*Se poziționează față de .dropdown, nu față de ecran*/
+  top: 35px;
+  left: 0;
+  background: white;
+  border-radius: 10px;
+  padding: 10px 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  min-width: 180px;
+
+  opacity: 0; 
+  pointer-events: none; 
+  transform: translateY(10px);
+  transition: 0.25s;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  transition: 0.2s;
+  font-size: 18px;
+}
+
+.dropdown-menu a:hover {
+  background: #f0f8ff;
+  color: #0077ff;
+}
+
+.dropdown-menu.open {
+  opacity: 1; 
+  pointer-events: auto;
+  transform: translateY(0);
+}
