@@ -1,16 +1,22 @@
-# React + Vite
+# Travel Booking Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About the Project
+A Full Stack web application dedicated to travel bookings. It functions as an interactive catalog where users can explore destinations, read reviews, and check accommodation availability in real-time.
 
-Currently, two official plugins are available:
+## Tech Stack & Architecture
+The system relies on a strict Client-Server architecture, separating the business logic from the user interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **Backend:** Built with .NET Core and C#. It functions as a RESTful API.
+* **Database:** SQL Server, managed via Entity Framework Core (includes automatic data seeding).
+* **Design Pattern:** The `BookingManager` uses the Singleton design pattern to ensure centralized, thread-safe management of all reservations.
+* **Frontend:** Built with React.js as a Single Page Application (SPA). Uses React Hooks (`useState`, `useEffect`) for state management and `fetch` for asynchronous API calls.
 
-## React Compiler
+## API Endpoints
+* `GET /api/destinations` - Retrieve the list of available offers.
+* `GET /api/destinations/{slug}` - Retrieve complete details for a specific offer.
+* `POST /api/bookings` - Submit and save a new booking.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+1. **Backend:** Configure your SQL Server connection string in `appsettings.json` and run the .NET project. The database will seed automatically.
+2. **Frontend:** Open a terminal in the React project folder, run `npm install`, and then `npm run dev`.
+3. The application will be accessible at `http://localhost:5173`.
